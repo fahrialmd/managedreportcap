@@ -1,0 +1,6 @@
+ID,title,descr,author_ID,genre_ID,stock,price,currency_code,rating,ISBN,isReviewable,createdAt,createdBy,modifiedAt,modifiedBy
+7ae070c4-10d9-4762-a4af-e1428ee4d026,Wuthering Heights,"A classic Gothic novel about love, revenge, and family conflict on the Yorkshire moors.",be0c6971-d472-4426-b967-ad8130ea269e,1000,200,12,USD,8.2,9780141439556,true,,,,
+7d0d669d-1a50-43f0-b133-43ae2eb015d4,Jane Eyre,"A coming-of-age story following an orphaned girl’s struggles, love, and quest for independence.",7f22cb15-a35e-4682-a006-f4587dfd6781,1000,170,15,USD,7.7,9780141441146,false,,,,
+d291a804-394c-4cee-91a8-b1a99fe88bfa,The Raven,"A narrative poem exploring grief, loss, and haunting through the visit of a mysterious raven.",e8011542-f37d-48e9-a9c8-a07c1bacd022,1003,223,12,USD,9.5,9780486266855,true,,,,
+3ec1d77a-f6b9-4f20-96d6-091b591aeb8b,Eleonora,"A short story blending romance and tragedy, reflecting on love, memory, and loss.",e8011542-f37d-48e9-a9c8-a07c1bacd022,1002,99,13,USD,5.6,9781533108161,false,,,,
+64a52163-7356-4b08-9e3f-3eef7ea42328,Catweazle,"A humorous fantasy tale about a medieval wizard who accidentally travels to the modern world.",d649473d-014a-4c71-9d88-73866b38a8c4,1001,167,11,USD,7.6,9780571211376,true,,,,

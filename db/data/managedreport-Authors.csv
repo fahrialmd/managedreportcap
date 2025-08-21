@@ -1,0 +1,5 @@
+ID,name,dateOfBirth,dateOfDeath,placeOfBirth,placeOfDeath,createdAt,createdBy,modifiedAt,modifiedBy
+be0c6971-d472-4426-b967-ad8130ea269e,Emily Brontë,1818-07-30,1848-12-19,"Thornton, West Riding of Yorkshire, England","Haworth, West Riding of Yorkshire, England",,,,
+7f22cb15-a35e-4682-a006-f4587dfd6781,Charlotte Brontë,1816-04-21,1855-03-31,"Thornton, West Riding of Yorkshire, England","Haworth, West Riding of Yorkshire, England",,,,
+e8011542-f37d-48e9-a9c8-a07c1bacd022,Edgar Allen Poe,1809-01-19,1849-10-07,"Boston, Massachusetts, United States","Baltimore, Maryland, United States",,,,
+d649473d-014a-4c71-9d88-73866b38a8c4,Richard Carpenter,1946-10-15,,"New Haven, Connecticut, United States",,,,,
