@@ -1,0 +1,5 @@
+OrderNo,buyer,total,currency_code
+001,buyer1,2000,USD
+002,buyer2,5000,USD
+003,buyer1,1290,USD
+004,buyer2,2700,USD
