@@ -10,7 +10,7 @@
           "instance": "managedreportcap-cds-db",
           "key": "managedreportcap-cds-db-key"
         },
-        "kind": "hana",
+        "kind": "hana-cloud",
         "vcap": {
           "name": "db"
         }
