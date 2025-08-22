@@ -10,6 +10,7 @@
   "sapux": [
     "app/unmanagedreport",
     "app/unmanagedreport",
+    "app/unmanagedanalyticaltablereport",
     "app/unmanagedanalyticaltablereport"
   ]
 }
