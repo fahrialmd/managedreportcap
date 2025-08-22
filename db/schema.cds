@@ -82,3 +82,15 @@ entity AllEntities {
       service     : String(150);
       namespace   : String(150);
 }
+
+@cds.persistence.skip
+entity OrderUnmanaged {
+  key OrderNo  : String        @title: '{i18n>OrderNumber}';
+      buyer    : User;
+
+      @Semantics.amount.currencyCode: 'currency_code'
+      total    : Decimal(9, 2) @readonly;
+
+      @Semantics.currencyCode
+      currency : Currency;
+}
