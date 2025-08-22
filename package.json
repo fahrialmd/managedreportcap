@@ -6,5 +6,8 @@
   "repository": "<Add your repository here>",
   "devDependencies": {
     "@sap/cds-dk": "^9.1.0"
-  }
+  },
+  "sapux": [
+    "app/unmanagedreport"
+  ]
 }
