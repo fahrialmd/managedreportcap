@@ -26,6 +26,7 @@ import com.sap.cds.services.handler.EventHandler;
 import com.sap.cds.services.handler.annotations.After;
 import com.sap.cds.services.handler.annotations.On;
 import com.sap.cds.services.handler.annotations.ServiceName;
+import com.sap.cds.services.persistence.PersistenceService;
 
 import customer.managedreportcap.utils.CheckDataVisitor;
 import customer.managedreportcap.utils.UnmanagedReportUtils;
@@ -96,33 +97,17 @@ public class CatalogServiceHandler implements EventHandler {
 
     @On(event = CqnService.EVENT_READ, entity = OrderUnmanaged_.CDS_NAME)
     public void getUnmanagedOrder(CdsReadEventContext context) {
-        List<OrderUnmanaged> resultList = new ArrayList<OrderUnmanaged>();
+        CqnSelect select = context.getCqn();
 
-        // get SELECT CQN object
-        CqnSelect cqnSelect = context.getCqn();
-
-        CqnSelect select = Select.from(Orders_.class);
-        Result result = catalogService.run(select);
-        result.forEach((row) -> {
-            OrderUnmanaged resultRow = OrderUnmanaged.create();
-
-            resultRow.setOrderNo(row.get("OrderNo").toString());
-            resultRow.setBuyer(row.get("buyer").toString());
-            // resultRow.setCurrencyCode(row.get("currency").toString());
-            resultRow.setTotal(new BigDecimal(row.get("total").toString()));
-
-            // filter
-            CheckDataVisitor checkDataVisitor = new CheckDataVisitor(resultRow);
-            try {
-                CqnPredicate cqnPredicate = cqnSelect.where().get();
-                cqnPredicate.accept(checkDataVisitor);
-                if (checkDataVisitor.matches()) {
-                    resultList.add(resultRow);
-                }
-            } catch (Exception e) {
-                resultList.add(resultRow);
+        CqnSelect selectCopy = CQL.copy(select, new Modifier() {
+            @Override
+            public CqnStructuredTypeRef ref(CqnStructuredTypeRef ref) {
+                // return CQL.to(Orders_.CDS_NAME).asRef();
+                return CQL.entity(Orders_.class).asRef();
             }
         });
-        context.setResult(result);
+
+        context.setResult(catalogService.run(selectCopy));
+
     }
 }
