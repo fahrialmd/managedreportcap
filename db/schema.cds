@@ -25,6 +25,8 @@ entity Books : cuid, managed {
   rating       : Decimal(2, 1);
   ISBN         : String(50);
   isReviewable : TechnicalBooleanFlag not null default true;
+  image        : LargeBinary @Core.MediaType: imageType;
+  imageType    : String      @Core.IsMediaType;
 }
 
 entity Authors : cuid, managed {
